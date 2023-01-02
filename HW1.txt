@@ -1,0 +1,22 @@
+import Pkg; Pkg.add("Plots")
+
+#不好意思，因為我不會先安裝在用cmd跑txt，所以把 import 放在txt裡
+
+n = 100	
+k = zeros(n)
+v = zeros(n)
+e = zeros(n)
+
+for i = 1:n
+k[i] = i
+v[i] = (1+1/i)^i
+e[i] = exp(1)
+end
+
+
+using Plots
+scatter(k,v, xlabel = "freq of compunding" , ylabel = "value", ylims = (0,3))
+scatter!(k,e)
+
+savefig("C:/Users/boyan/OneDrive/桌面/julia HW1.png")
+
